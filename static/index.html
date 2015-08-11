@@ -74,11 +74,21 @@
     <!-- End Navigation -->
 
     <!-- Being Video Hero -->
-    <section id="spacecamp" class="spacecamp cd-section">
+    <section id="spacecamp" class="spacecamp cd-section masthead">
+      <!-- CoverVid -->
+      <video class="masthead-video" autoplay loop muted poster="/images/poster.jpg">
+  			<source src="video/dreamscapes.mp4" type="video/mp4">
+  			<source src="video/dreamscapes.webm" type="video/webm">
+  		</video>
+  		<div class="masthead-overlay"></div>
+  		<div class="masthead-arrow"></div>
+  		<h1>WE ARE THINKERS</h1>
+      <!-- standard space 150 Layout
       <h2>Space Camp</h2>
       <div class="video-wrapper">
         <iframe src="" class="video"></iframe>
-      </div>
+      </div> -->
+
       <!-- <div class="video-wrapper">
         <iframe src="https://player.vimeo.com/video/122571409?wmode=transparent" frameborder="0" allowfullscreen wmode="opaque"></iframe>
       </div> -->
@@ -177,5 +187,14 @@
   </div>
   <script src="scss/vendor/vertical-fixed-navigation-original/js/jquery-2.1.1.js"></script>
   <script src="scss/vendor/vertical-fixed-navigation-original/js/vertical-fixed-navigation.js"></script> <!-- Resource jQuery -->
+  <script src="js/vendor/covervid.js"></script> <!-- Covervid -->
+  <!-- <script src="js/vendor/covervid_ux.js"></script> Covervid Parallax Functionality -->
+  <!-- Call CoverVid -->
+	<script type="text/javascript">
+		// If using jQuery
+			// $('.masthead-video').coverVid(1920, 1080);
+		// If not using jQuery (Native Javascript)
+			coverVid(document.querySelector('.masthead-video'), 640, 360);
+	</script>
 </body>
 </html>

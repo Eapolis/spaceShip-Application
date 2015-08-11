@@ -15,6 +15,7 @@ body { min-width: $site-min-width; }
   //@include rem(padding-right, $gutter, $base-font-size--mobile);
 }
 
+// BEGIN example space150 video layout
 .video-wrapper {
 	position: relative;
 	padding-bottom: 56.25%; /* 16:9 */
@@ -28,3 +29,47 @@ body { min-width: $site-min-width; }
 		height: 100%;
 	}
 }
+// END example space150 layout
+
+// BEGIN covervid styles
+.covervid-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.masthead {
+    position: relative;
+    min-width: 720px;
+}
+.masthead-video {
+    z-index: 0;
+}
+.masthead-overlay {
+    background-color: #000;
+    opacity: 0.4;
+    position: absolute;
+    top: 0; left: 0;
+    bottom: 0; right: 0;
+    width: 100%;
+    height: 100%;
+}
+.masthead-arrow {
+    position: absolute;
+    bottom: 25px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    width: 30px;
+    height: 30px;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    opacity: 0.4;
+}
+// END covervid styles
