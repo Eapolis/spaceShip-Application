@@ -9,8 +9,10 @@ body { min-width: $site-min-width; }
   min-width: $site-min-width;
   margin-left: auto;
   margin-right: auto;
-  @include rem(padding-left, $gutter, $base-font-size--mobile);
-  @include rem(padding-right, $gutter, $base-font-size--mobile);
+  text-align: center;
+  height: 100%;
+  //@include rem(padding-left, $gutter, $base-font-size--mobile);
+  //@include rem(padding-right, $gutter, $base-font-size--mobile);
 }
 
 .video-wrapper {

@@ -5,8 +5,8 @@
 @import "vars";
 
 // Choose either Reset or Normalize:
-@import "vendor/normalize"; $normalize: true;
-// @import "vendor/reset"; $reset: true;
+//@import "vendor/normalize"; $normalize: true;
+@import "vendor/reset"; $reset: true;
 
 @import "base/functions";
 @import "base/mixins";
@@ -28,3 +28,5 @@
 @import "ui/header";
 @import "ui/footer";
 @import "ui/print";
+
+@import "vendor/vertical-fixed-navigation-original/scss/style";

@@ -18,31 +18,63 @@
     <!--[if (lt IE 9) & (!IEMobile)]>
     <link href="stylesheets/application-ie.css" media="all" rel="stylesheet" type="text/css" />
     <![endif]-->
+
+    <script src="scss/vendor/vertical-fixed-navigation-original/js/modernizr.js"></script> <!-- Modernizr -->
 </head>
 <body>
   <div class="site-wrapper">
-    <!-- Begin Header -->
-    <header class="header">
-      <div class="logo">
-        <!--insert logo-->
-        <h1>Space Internship</h1>
-      </div>
-      <nav class="nav">
-        <!--unordered list of links-->
-        <ul class="h-list">
-          <li><a href="#spacecamp">space camp</a></li>
-          <li><a href="#process">process</a></li>
-          <li><a href="#dosanddonts">what we don't do</a></li>
-          <li><a href="#manifesto">manifesto</a></li>
-          <li><a href="#positions">positions</a></li>
-          <li><a href="#apply">apply</a></li>
-        </ul>
-      </nav>
-    </header>
-    <!-- End Header -->
+    <!-- Begin Navigation -->
+    <a class="cd-nav-trigger cd-img-replace">Open navigation</a>
+    <nav id="cd-vertical-nav" >
+    	<ul>
+        <!-- Section 1 -->
+    		<li>
+    			<a href="#spacecamp" data-number="1">
+    				<span class="cd-dot"></span>
+    				<span class="cd-label">space camp</span>
+    			</a>
+    		</li>
+    		<!-- Section 2 -->
+        <li>
+    			<a href="#process" data-number="2">
+    				<span class="cd-dot"></span>
+    				<span class="cd-label">process</span>
+    			</a>
+    		</li>
+        <!-- Section 3 -->
+        <li>
+    			<a href="#what-we-do" data-number="3">
+    				<span class="cd-dot"></span>
+    				<span class="cd-label">what we do</span>
+    			</a>
+    		</li>
+        <!-- Section 4 -->
+        <li>
+    			<a href="#captains-log" data-number="4">
+    				<span class="cd-dot"></span>
+    				<span class="cd-label">captain's log</span>
+    			</a>
+    		</li>
+        <!-- Section 5 -->
+        <li>
+    			<a href="#cadets" data-number="5">
+    				<span class="cd-dot"></span>
+    				<span class="cd-label">cadets</span>
+    			</a>
+    		</li>
+        <!-- Section 6 -->
+        <li>
+    			<a href="#enlist" data-number="6">
+    				<span class="cd-dot"></span>
+    				<span class="cd-label">enlist</span>
+    			</a>
+    		</li>
+    	</ul>
+    </nav>
+    <!-- End Navigation -->
 
     <!-- Being Video Hero -->
-    <section id="spacecamp" class="spacecamp">
+    <section id="spacecamp" class="spacecamp cd-section">
       <h2>Space Camp</h2>
       <div class="video-wrapper">
         <iframe src="" class="video"></iframe>
@@ -54,7 +86,7 @@
     <!-- End Video Header -->
 
     <!-- Begin Process Section -->
-    <section id="process" class="process">
+    <section id="process" class="process cd-section">
       <h2>Process</h2>
       <div class="grid-wrapper">
         <div class="grid one-third">
@@ -71,7 +103,7 @@
     <!-- End Process Section -->
 
     <!-- Begin What We Do Section -->
-    <section id="dosanddonts" class="dosanddonts">
+    <section id="what-we-do" class="what-we-do cd-section">
       <div class="grid-wrapper">
         <div class="grid one-half">
           <h2>What We Don't Do</h2>
@@ -84,14 +116,14 @@
     <!-- End Dos and Donts Section -->
 
     <!-- Begin Message From Our Director Section -->
-    <section id="manifesto" class="manifesto">
-      <h2>Manifeto</h2>
+    <section id="captains-log" class="captains-log cd-section">
+      <h2>This Is Your Captain Speaking</h2>
     </section>
     <!-- End Message From Our Director Section -->
 
     <!-- Begin Intern Profiles Section -->
-    <section id="positions" class="positions">
-      <h2>Positions</h2>
+    <section id="cadets" class="cadets cd-section">
+      <h2>spaceCadet Class of 2015</h2>
       <div class="grid-wrapper">
         <div class="grid one-third">
           <h3>Engineering</h3>
@@ -119,9 +151,9 @@
     <!-- End Intern Profiles Section -->
 
     <!-- Begin Sign Up Section -->
-    <section id="apply" class="apply">
-      <h2>Apply</h2>
-      <a class="btn" href="">Apply</a>
+    <section id="enlist" class="enlist cd-section">
+      <h2>Enlist</h2>
+      <a class="btn" href="">Enlist</a>
     </section>
     <!-- End Sign Up Section -->
 
@@ -141,7 +173,9 @@
       </ul>
     </footer>
     <!-- End Footer -->
-    
+
   </div>
+  <script src="scss/vendor/vertical-fixed-navigation-original/js/jquery-2.1.1.js"></script>
+  <script src="scss/vendor/vertical-fixed-navigation-original/js/vertical-fixed-navigation.js"></script> <!-- Resource jQuery -->
 </body>
 </html>
