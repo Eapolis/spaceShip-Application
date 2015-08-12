@@ -1872,11 +1872,30 @@ body, html {
   opacity: 0.4;
 }
 
+.spacecamp h1 {
+  position: absolute;
+  text-align: center;
+  left: 50%;
+  right: auto;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  color: #fff;
+}
+
 .process {
   background: url("../images/nasa-desert-testing.jpg");
   background-size: cover;
   background-position: center center;
   position: relative;
+}
+
+.process-box {
+  width: 80px;
+  height: 95px;
+  margin: 30px 10px;
+  border: 1px solid #fff;
+  display: inline-block;
+  text-align: center;
 }
 
 .visible-print {
@@ -1958,42 +1977,48 @@ Main components
   min-height: 100%;
   position: relative;
   padding: 2em 0;
+  /*
+  	h1, p {
+  		position: absolute;
+  		@include center;
+  		width: 90%;
+  		//max-width: $M;
+  		text-align: center;
+  	}
+  
+  	h1 {
+  		color: $white;
+  		font-weight: 300;
+  		text-transform: uppercase;
+  		//@include font-size(20px);
+  	}
+  
+  	p {
+  		line-height: 1.6;
+  	}
+  
+  	@include media-query(lap-and-up) {
+  		h1 {
+  			//@include font-size(30px);
+  		}
+  
+  		p {
+  			//@include font-size(20px);
+  			line-height: 2;
+  		}
+  	} */
 }
 .cd-section:nth-of-type(odd) {
   background-color: #7abcb5;
-}
-.cd-section:nth-of-type(odd) p {
-  color: #e0efee;
+  /* p {
+  	color: lighten($primary, 30%);
+  } */
 }
 .cd-section:nth-of-type(even) {
   background-color: #41a29c;
-}
-.cd-section:nth-of-type(even) p {
-  color: #a2dad6;
-}
-.cd-section h1, .cd-section p {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  bottom: auto;
-  right: auto;
-  -moz-transform: translateX(-50%) translateY(-50%);
-  -ms-transform: translateX(-50%) translateY(-50%);
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
-  width: 90%;
-  text-align: center;
-}
-.cd-section h1 {
-  color: #fff;
-  font-weight: 300;
-  text-transform: uppercase;
-}
-.cd-section p {
-  line-height: 1.6;
-}
-.cd-section p {
-  line-height: 2;
+  /* p {
+  	color: lighten($secondary, 30%);
+  } */
 }
 
 .cd-scroll-down {

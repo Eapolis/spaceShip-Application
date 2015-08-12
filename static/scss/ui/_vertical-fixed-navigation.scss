@@ -57,23 +57,22 @@ Main components
 	position: relative;
 	padding: 2em 0;
 
-
 	&:nth-of-type(odd) {
 		background-color: $primary;
 
-		p {
+		/* p {
 			color: lighten($primary, 30%);
-		}
+		} */
 	}
 
 	&:nth-of-type(even) {
 		background-color: $secondary; //dark teal
 
-		p {
+		/* p {
 			color: lighten($secondary, 30%);
-		}
+		} */
 	}
-
+/*
 	h1, p {
 		position: absolute;
 		@include center;
@@ -102,7 +101,7 @@ Main components
 			//@include font-size(20px);
 			line-height: 2;
 		}
-	}
+	} */
 }
 
 .cd-scroll-down {
