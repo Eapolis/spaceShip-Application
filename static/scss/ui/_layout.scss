@@ -4,6 +4,10 @@
 
 body { min-width: $site-min-width; }
 
+body, html {
+	height: 100%;
+}
+
 .site-wrapper {
   max-width: $site-wrapper-max-width;
   min-width: $site-min-width;
@@ -14,6 +18,7 @@ body { min-width: $site-min-width; }
   //@include rem(padding-left, $gutter, $base-font-size--mobile);
   //@include rem(padding-right, $gutter, $base-font-size--mobile);
 }
+
 
 // BEGIN example space150 video layout
 .video-wrapper {
@@ -31,7 +36,7 @@ body { min-width: $site-min-width; }
 }
 // END example space150 layout
 
-// BEGIN covervid styles
+// BEGIN STYLE FOR SPACECAMP SECTION
 .covervid-wrapper {
     position: absolute;
     top: 0;
@@ -72,4 +77,10 @@ body { min-width: $site-min-width; }
     border-bottom: 2px solid #fff;
     opacity: 0.4;
 }
-// END covervid styles
+// END SPACECAMP SECTION
+.process {
+	background: url("../images/nasa-desert-testing.jpg");
+	background-size: cover;
+	background-position:center center;
+	position: relative;
+}

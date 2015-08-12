@@ -2132,6 +2132,10 @@ body {
   min-width: 320px;
 }
 
+body, html {
+  height: 100%;
+}
+
 .site-wrapper {
   max-width: 1440px;
   min-width: 320px;
@@ -2202,6 +2206,13 @@ body {
   opacity: 0.4;
 }
 
+.process {
+  background: url("../images/nasa-desert-testing.jpg");
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+}
+
 .visible-print {
   display: none !important;
 }
@@ -2254,46 +2265,11 @@ body {
     display: none !important;
   }
 }
-/*
-  spaceBase version: 1.0.1
-  http://spacebase.space150.com
-*/
 /* --------------------------------
 
-Primary style
+Mixins
 
 -------------------------------- */
-html * {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-*, *:after, *:before {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-body {
-  font-size: 100%;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #fff;
-  background-color: #fff;
-}
-
-body, html {
-  height: 100%;
-}
-
-a {
-  color: #e48d38;
-  text-decoration: none;
-}
-
-img {
-  max-width: 100%;
-}
-
 /* --------------------------------
 
 Modules - reusable parts of our design
@@ -2340,27 +2316,18 @@ Main components
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
   width: 90%;
-  max-width: 768px;
   text-align: center;
 }
 .cd-section h1 {
   color: #fff;
   font-weight: 300;
   text-transform: uppercase;
-  font-size: 20px;
-  font-size: 1.25rem;
 }
 .cd-section p {
   line-height: 1.6;
 }
 @media only screen and (min-width: 768px) {
-  .cd-section h1 {
-    font-size: 30px;
-    font-size: 1.875rem;
-  }
   .cd-section p {
-    font-size: 20px;
-    font-size: 1.25rem;
     line-height: 2;
   }
 }
@@ -2376,7 +2343,7 @@ Main components
   bottom: 20px;
   width: 38px;
   height: 44px;
-  background: url("../img/cd-arrow-bottom.svg") no-repeat center center;
+  background: url("../images/cd-arrow-bottom.svg") no-repeat center center;
 }
 
 /* No Touch devices */
@@ -2400,12 +2367,18 @@ Main components
 }
 .no-touch #cd-vertical-nav a {
   display: inline-block;
-  overflow: hidden;
   *zoom: 1;
   /* prevent weird movements on hover when you use a CSS3 transformation - webkit browsers */
   -moz-backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+}
+.no-touch #cd-vertical-nav a:before, .no-touch #cd-vertical-nav a:after {
+  display: table;
+  content: "";
+}
+.no-touch #cd-vertical-nav a:after {
+  clear: both;
 }
 .no-touch #cd-vertical-nav a span {
   float: right;
@@ -2448,8 +2421,6 @@ Main components
   margin-right: 10px;
   padding: .4em .5em;
   color: #fff;
-  font-size: 14px;
-  font-size: 0.875rem;
   -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
   -moz-transition: -moz-transform 0.2s, opacity 0.2s;
   transition: transform 0.2s, opacity 0.2s;
