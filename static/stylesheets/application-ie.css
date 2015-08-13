@@ -1891,11 +1891,45 @@ body, html {
 
 .process-box {
   width: 80px;
-  height: 95px;
+  height: 96px;
   margin: 30px 10px;
   border: 1px solid #fff;
   display: inline-block;
   text-align: center;
+  color: #fff;
+}
+.process-box .process-box-top-half {
+  height: 48px;
+  padding-top: 5px;
+}
+.process-box .process-box-bottom-half {
+  height: 48px;
+  padding-top: 5px;
+}
+
+#process-copy {
+  color: #fff;
+}
+
+#capt-log-banner {
+  position: absolute;
+  top: 60px;
+  padding: 10px 20px;
+  background-color: #355592;
+  color: #fff;
+  text-align: center;
+}
+
+#capt-log {
+  position: relative;
+  left: 20px;
+  top: 90px;
+  padding: 20px 10px;
+  text-align: left;
+}
+
+#capt-image {
+  position: absolute;
 }
 
 .visible-print {
@@ -1977,48 +2011,53 @@ Main components
   min-height: 100%;
   position: relative;
   padding: 2em 0;
+  border: 1px dashed #7abcb5;
   /*
-  	h1, p {
-  		position: absolute;
-  		@include center;
-  		width: 90%;
-  		//max-width: $M;
-  		text-align: center;
-  	}
-  
-  	h1 {
-  		color: $white;
-  		font-weight: 300;
-  		text-transform: uppercase;
-  		//@include font-size(20px);
-  	}
-  
-  	p {
-  		line-height: 1.6;
-  	}
-  
-  	@include media-query(lap-and-up) {
-  		h1 {
-  			//@include font-size(30px);
-  		}
-  
-  		p {
-  			//@include font-size(20px);
-  			line-height: 2;
-  		}
-  	} */
-}
-.cd-section:nth-of-type(odd) {
-  background-color: #7abcb5;
-  /* p {
-  	color: lighten($primary, 30%);
-  } */
-}
-.cd-section:nth-of-type(even) {
-  background-color: #41a29c;
-  /* p {
-  	color: lighten($secondary, 30%);
-  } */
+	&:nth-of-type(odd) {
+		background-color: $primary;
+
+		p {
+			color: lighten($primary, 30%);
+		}
+	}
+
+	&:nth-of-type(even) {
+		background-color: $secondary; //dark teal
+
+		p {
+			color: lighten($secondary, 30%);
+		}
+	}
+
+	h1, p {
+		position: absolute;
+		@include center;
+		width: 90%;
+		//max-width: $M;
+		text-align: center;
+	}
+
+	h1 {
+		color: $white;
+		font-weight: 300;
+		text-transform: uppercase;
+		//@include font-size(20px);
+	}
+
+	p {
+		line-height: 1.6;
+	}
+
+	@include media-query(lap-and-up) {
+		h1 {
+			//@include font-size(30px);
+		}
+
+		p {
+			//@include font-size(20px);
+			line-height: 2;
+		}
+	} */
 }
 
 .cd-scroll-down {
@@ -2109,7 +2148,7 @@ Main components
   position: relative;
   margin-right: 10px;
   padding: .4em .5em;
-  color: #fff;
+  color: #7abcb5;
   -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
   -moz-transition: -moz-transform 0.2s, opacity 0.2s;
   transition: transform 0.2s, opacity 0.2s;

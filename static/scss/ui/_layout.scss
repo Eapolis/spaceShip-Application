@@ -35,7 +35,10 @@ body, html {
 }
 // END example space150 layout
 
-// BEGIN STYLE FOR SPACECAMP SECTION
+//------------------------------------//
+//  1. SPACECAMP SECTION
+//------------------------------------//
+
 .covervid-wrapper {
     position: absolute;
     top: 0;
@@ -90,7 +93,9 @@ body, html {
 }
 // END SPACECAMP SECTION
 
-//BEGIN PROCESS SECTION
+//------------------------------------//
+//  2. PROCESS SECTION
+//------------------------------------//
 .process {
 	background: url("../images/nasa-desert-testing.jpg");
 	background-size: cover;
@@ -100,9 +105,46 @@ body, html {
 
 .process-box {
 	width: 80px;
-	height: 95px;
+	height: 96px;
 	margin: 30px 10px;
 	border: 1px solid $white;
 	display: inline-block;
 	text-align: center;
+	color: $white;
+	.process-box-top-half {
+		height: 48px;
+		padding-top: 5px;
+	}
+	.process-box-bottom-half {
+		height: 48px;
+		padding-top: 5px;
+	}
 }
+
+#process-copy {
+	color: $white;
+}
+//END PROCESS SECTION
+
+//------------------------------------//
+//  4. CAPTAIN'S LOG SECTION
+//------------------------------------//
+#capt-log-banner {
+	position: absolute;
+	top: 60px;
+	padding: 10px 20px;
+	background-color: #355592;
+	color: $white;
+	text-align: center;
+}
+#capt-log {
+	position: relative;
+	left: 20px;
+	top: 90px;
+	padding: 20px 10px;
+	text-align: left;
+}
+#capt-image {
+	position: absolute;
+}
+//END CAPTAIN'S LOG SECTION
