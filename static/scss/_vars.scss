@@ -18,8 +18,8 @@ $push: true;
 $pull: true;
 
 // Include responsive grid widths w/breakpoint namespace?
-$responsive:           true;
-$responsive-push-pull: true;
+$responsive:           false;
+$responsive-push-pull: false;
 
 // Base measurements
 $base-font-size:         16px;
