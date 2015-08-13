@@ -999,6 +999,12 @@ body, html {
   height: 100%;
 }
 
+@media only screen and (max-width: 767px) {
+  .gutter {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
 .covervid-wrapper {
   position: absolute;
   top: 0;

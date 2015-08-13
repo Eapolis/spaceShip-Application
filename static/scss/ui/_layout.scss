@@ -35,6 +35,15 @@ body, html {
 }
 // END example space150 layout
 
+//15px left and right gutter for handheld devices
+ @include media-query(below-lap) {
+	 .gutter  {
+		 padding-left:15px;
+		 padding-right:15px;
+	 }
+ }
+
+
 //------------------------------------//
 //  1. SPACECAMP SECTION
 //------------------------------------//
