@@ -57,52 +57,7 @@ Main components
 	position: relative;
 	padding: 2em 0;
   border: 1px dashed $primary;
-  /*
-	&:nth-of-type(odd) {
-		background-color: $primary;
 
-		p {
-			color: lighten($primary, 30%);
-		}
-	}
-
-	&:nth-of-type(even) {
-		background-color: $secondary; //dark teal
-
-		p {
-			color: lighten($secondary, 30%);
-		}
-	}
-
-	h1, p {
-		position: absolute;
-		@include center;
-		width: 90%;
-		//max-width: $M;
-		text-align: center;
-	}
-
-	h1 {
-		color: $white;
-		font-weight: 300;
-		text-transform: uppercase;
-		//@include font-size(20px);
-	}
-
-	p {
-		line-height: 1.6;
-	}
-
-	@include media-query(lap-and-up) {
-		h1 {
-			//@include font-size(30px);
-		}
-
-		p {
-			//@include font-size(20px);
-			line-height: 2;
-		}
-	} */
 }
 
 .cd-scroll-down {
@@ -152,7 +107,7 @@ Main components
 		}
 
 		&.is-selected .cd-dot {
-			background-color: $white;
+			background-color: $secondary;
 		}
 	}
 

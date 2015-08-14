@@ -35,7 +35,7 @@ body, html {
 }
 // END example space150 layout
 
-//15px left and right gutter for handheld devices
+//15px left and right gutter when viewed on handheld devices
  @include media-query(below-lap) {
 	 .gutter  {
 		 padding-left:15px;
@@ -154,7 +154,11 @@ body, html {
 		text-align: left;
 	}
 	#capt-image {
-		position: absolute;
+		position: relative;
 	}
 }
 //END CAPTAIN'S LOG SECTION
+
+//------------------------------------//
+//  5. CADETS SECTION
+//------------------------------------//

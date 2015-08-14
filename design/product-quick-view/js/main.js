@@ -1,58 +1,4 @@
 jQuery(document).ready(function($){
-	var contentSections = $('.cd-section'),
-		navigationItems = $('#cd-vertical-nav a');
-
-	updateNavigation();
-	$(window).on('scroll', function(){
-		updateNavigation();
-	});
-
-	//smooth scroll to the section
-	navigationItems.on('click', function(event){
-        event.preventDefault();
-        smoothScroll($(this.hash));
-    });
-    //smooth scroll to second section
-    $('.cd-scroll-down').on('click', function(event){
-        event.preventDefault();
-        smoothScroll($(this.hash));
-    });
-
-    //open-close navigation on touch devices
-    $('.touch .cd-nav-trigger').on('click', function(){
-    	$('.touch #cd-vertical-nav').toggleClass('open');
-
-    });
-    //close navigation on touch devices when selectin an elemnt from the list
-    $('.touch #cd-vertical-nav a').on('click', function(){
-    	$('.touch #cd-vertical-nav').removeClass('open');
-    });
-
-	function updateNavigation() {
-		contentSections.each(function(){
-			$this = $(this);
-			var activeSection = $('#cd-vertical-nav a[href="#'+$this.attr('id')+'"]').data('number') - 1;
-			if ( ( $this.offset().top - $(window).height()/2 < $(window).scrollTop() ) && ( $this.offset().top + $this.height() - $(window).height()/2 > $(window).scrollTop() ) ) {
-				navigationItems.eq(activeSection).addClass('is-selected');
-			}else {
-				navigationItems.eq(activeSection).removeClass('is-selected');
-			}
-		});
-	}
-
-	function smoothScroll(target) {
-        $('body,html').animate(
-        	{'scrollTop':target.offset().top},
-        	600
-        );
-	}
-});
-
-//---------------------------------------------/
-//
-//			quick-view plug-in
-//---------------------------------------------/
-jQuery(document).ready(function($){
 	//final width --> this is the quick view image slider width
 	//maxQuickWidth --> this is the max-width of the quick-view panel
 	var sliderFinalWidth = 400,
@@ -100,10 +46,10 @@ jQuery(document).ready(function($){
 		var sliderConatiner = navigation.parents('.cd-slider-wrapper').find('.cd-slider'),
 			activeSlider = sliderConatiner.children('.selected').removeClass('selected');
 		if ( navigation.hasClass('cd-next') ) {
-			( !activeSlider.is(':last-child') ) ? activeSlider.next().addClass('selected') : sliderConatiner.children('li').eq(0).addClass('selected');
+			( !activeSlider.is(':last-child') ) ? activeSlider.next().addClass('selected') : sliderConatiner.children('li').eq(0).addClass('selected'); 
 		} else {
 			( !activeSlider.is(':first-child') ) ? activeSlider.prev().addClass('selected') : sliderConatiner.children('li').last().addClass('selected');
-		}
+		} 
 	}
 
 	function updateQuickView(url) {
@@ -117,7 +63,7 @@ jQuery(document).ready(function($){
 		    "top": quickViewTop,
 		    "left": quickViewLeft,
 		});
-	}
+	} 
 
 	function closeQuickView(finalWidth, maxQuickWidth) {
 		var close = $('.cd-close'),
